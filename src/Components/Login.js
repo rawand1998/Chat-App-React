@@ -7,7 +7,9 @@ function Login() {
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
   const login =()=>{
-    auth.signInWithEmailAndPassword(email,password)
+    auth.signInWithEmailAndPassword(email,password).then(()=>{
+      console.log('hu')
+    })
   }
     const loginWithGoogle = ()=>{
        const provider = new firebase.auth.GoogleAuthProvider()
