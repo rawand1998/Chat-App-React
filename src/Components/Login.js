@@ -9,8 +9,8 @@ function Login() {
        auth.signInWithPopup(provider)
     }
   return (
-    <div>
-        <button onClick={login}>Login with Google</button>
+    <div className="login">
+        <button onClick={login} >Login with Google</button>
 
     </div>
   )
