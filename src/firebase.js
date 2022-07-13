@@ -1,6 +1,7 @@
-import firebase from "firebase"
-
-const firebaseConfig = firebase.inizationApp({
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+const firebaseConfig = firebase.initializeApp({
     apiKey: "AIzaSyAHm_OnUk6d-GFhjbt7NHb81Hn5pGQ-TD0",
     authDomain: "chat-react-7ce2a.firebaseapp.com",
     projectId: "chat-react-7ce2a",
@@ -10,5 +11,5 @@ const firebaseConfig = firebase.inizationApp({
     measurementId: "G-5C7LS285S3"
 })
 const db = firebaseConfig.firestore()
-const auth = firebaseConfig.auth(db)
-export {db,auth}
+const auth = firebase.auth()
+export  {db,auth}
