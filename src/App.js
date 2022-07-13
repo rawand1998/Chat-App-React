@@ -4,11 +4,13 @@ import {auth} from './firebase'
 import './App.css'
 import Login from './Components/Login'
 import Chat from './Components/Chat'
+import Register from './Components/Register'
 function App() {
   const [user] = useAuthState(auth)
  return (
    <div>
-       {user ? <Chat /> : <Login />}
+       {/* {user ? <Chat /> : <Login />} */}
+       <Login />
    </div>
  )
 }
