@@ -1,8 +1,13 @@
 import React from 'react'
+import Logout from './Logout'
 
 function Chat() {
   return (
-    <div>Chat</div>
+  
+    <div>
+          <Logout />
+          chat
+    </div>
   )
 }
 
