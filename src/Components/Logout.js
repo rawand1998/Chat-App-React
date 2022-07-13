@@ -6,7 +6,7 @@ function Logout() {
         auth.signOut()
     }
   return (
-    <div>
+    <div className="logout">
         <button onClick={logout}>Logout</button>
     </div>
   )
