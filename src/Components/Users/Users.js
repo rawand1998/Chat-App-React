@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../firebase";
-
+import { db } from "../../firebase";
+import './Style.css'
 function Users() {
   const [data, setData] = useState([]);
 
@@ -18,7 +18,7 @@ db.collection('users').onSnapshot((snapshot) => {
     <div>
       <div>
         {data.length>0  ? data.map((item)=>(
-          <div>
+          <div key={item.id}>
             <img src={item.img} />
             {item.name}
           </div>

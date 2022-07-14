@@ -17,7 +17,7 @@ function Login() {
     }
   return (
     <div className="login">
-      <form onSubmit={login}>
+      <form>
        
         
 
@@ -27,7 +27,7 @@ function Login() {
         <label>Password</label>
         <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}  />
       </form>
-      <button type="submit">Login</button>
+      <button type="submit" onClick={login}>Login</button>
         <button onClick={loginWithGoogle} >Login with Google</button>
 
     </div>
