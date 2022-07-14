@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
-import { auth, db } from "../firebase";
+import { auth, db } from "../../firebase";
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

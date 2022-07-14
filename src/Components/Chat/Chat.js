@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
-import Logout from './Logout'
+import Logout from '../Auth/Logout'
 
-import {db,auth} from '../firebase'
+import {db,auth} from '../../firebase'
 import SendMsg from './SendMsg'
 
 function Chat() {
