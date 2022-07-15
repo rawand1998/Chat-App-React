@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import { auth } from "../../firebase";
-
+import {Link,useNavigate } from 'react-router-dom'
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+const nagvigate = useNavigate()
   const login = () => {
-    auth.signInWithEmailAndPassword(email, password).then(() => {});
+    auth.signInWithEmailAndPassword(email, password).then(() => {
+      nagvigate('/')
+    });
   };
   const loginWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -34,6 +36,7 @@ function Login() {
         Login
       </button>
       <button onClick={loginWithGoogle}>Login with Google</button>
+      <Link to="/register">sign up</Link>
     </div>
   );
 }

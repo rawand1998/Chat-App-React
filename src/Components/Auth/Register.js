@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import { auth, db } from "../../firebase";
+import {Link,useNavigate } from 'react-router-dom'
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userName, setUserName] = useState("");
   const [img, setImg] = useState("");
+  const nagvigate = useNavigate()
   const handleImage = (e)=>{
     const image = e.target.files[0].name
     setImg(img => (image))
@@ -20,7 +22,9 @@ function Register() {
         email: email,
         name: userName,
         img: img,
-      });
+      }).then(()=>{
+        nagvigate('/login')
+      })
     });
   };
   return (
