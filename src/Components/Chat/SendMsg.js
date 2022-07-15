@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {db,auth} from '../firebase'
+import {db,auth} from '../../firebase'
 import firebase from 'firebase/compat/app';
 function SendMsg() {
     const { uid, photoURL } = auth.currentUser

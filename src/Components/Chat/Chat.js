@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
-import Logout from './Logout'
+import Logout from '../Auth/Logout'
 
-import {db,auth} from '../firebase'
+import {db,auth} from '../../firebase'
 import SendMsg from './SendMsg'
 
 function Chat() {
@@ -20,7 +20,7 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
   
     <div>
           <Logout />
-          <SendMsg />
+          {/* <SendMsg /> */}
           <div className="msgs">
            {msg.map(({ id, text, photoURL, uid }) =>(
             <div key={id} className={`msg ${uid === auth.currentUser.uid ? 'sent' : 'received'}`}>

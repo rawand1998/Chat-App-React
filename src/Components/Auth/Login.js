@@ -1,15 +1,19 @@
 import React,{useState,useEffect} from 'react'
 import firebase from 'firebase/compat/app';
-import { auth } from '../firebase';
+import { auth } from '../../firebase';
+import {ContextData} from '../../Context/GetName'
+
 
 
 function Login() {
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
+const {active,serActive}= React.useContext(ContextData)
   const login =()=>{
     auth.signInWithEmailAndPassword(email,password).then(()=>{
-      console.log('hu')
-    })
+      // serActive(!active)
+      // console.log('Login successful',active) qw23wa
+      })
   }
     const loginWithGoogle = ()=>{
        const provider = new firebase.auth.GoogleAuthProvider()
@@ -17,7 +21,7 @@ function Login() {
     }
   return (
     <div className="login">
-      <form onSubmit={login}>
+      <form>
        
         
 
@@ -27,7 +31,7 @@ function Login() {
         <label>Password</label>
         <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}  />
       </form>
-      <button type="submit">Login</button>
+      <button type="submit" onClick={login}>Login</button>
         <button onClick={loginWithGoogle} >Login with Google</button>
 
     </div>

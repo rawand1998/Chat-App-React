@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
-import { auth, db } from "../firebase";
+import { auth, db } from "../../firebase";
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,8 +14,8 @@ function Register() {
   const register = () => {
     auth.createUserWithEmailAndPassword(email, password).then((res) => {
       const user = res.user;
-
-      db.collection("users").add({
+           console.log(user.uid)
+      db.collection("users").doc(user.uid).set({
         uid: user.uid,
         email: email,
         name: userName,

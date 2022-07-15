@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import GetName, { ContextData } from './Context/GetName';
 import App from './App';
 ReactDOM.render(
-  <React.StrictMode>
+  <GetName>
     <App />
-  </React.StrictMode>,
+  </GetName>,
   document.getElementById('root')
 );
 
