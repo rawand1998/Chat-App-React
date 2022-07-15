@@ -1,7 +1,6 @@
-img {
-  /* border-radius: 50%; */
+/* img {
   height: 45px;
-  /* margin-top: -20px; */
+
   border: 2px solid black;
 }
 
@@ -76,7 +75,7 @@ p {
 }
 .logout {
   display: flex;
-  /* justify-content: center; */
+
   position: fixed;
   width: 100%;
   background-color: #fafafa;
@@ -137,4 +136,4 @@ p {
     height: 30px;
     margin-top: -7px;
   }
-}
+} */
