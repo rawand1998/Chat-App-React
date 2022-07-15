@@ -20,7 +20,7 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
   
     <div>
           <Logout />
-          <SendMsg />
+          {/* <SendMsg /> */}
           <div className="msgs">
            {msg.map(({ id, text, photoURL, uid }) =>(
             <div key={id} className={`msg ${uid === auth.currentUser.uid ? 'sent' : 'received'}`}>

@@ -14,8 +14,8 @@ function Register() {
   const register = () => {
     auth.createUserWithEmailAndPassword(email, password).then((res) => {
       const user = res.user;
-
-      db.collection("users").add({
+           console.log(user.uid)
+      db.collection("users").doc(user.uid).set({
         uid: user.uid,
         email: email,
         name: userName,

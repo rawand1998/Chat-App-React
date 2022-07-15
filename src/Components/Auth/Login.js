@@ -1,15 +1,19 @@
 import React,{useState,useEffect} from 'react'
 import firebase from 'firebase/compat/app';
 import { auth } from '../../firebase';
+import {ContextData} from '../../Context/GetName'
+
 
 
 function Login() {
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
+const {active,serActive}= React.useContext(ContextData)
   const login =()=>{
     auth.signInWithEmailAndPassword(email,password).then(()=>{
-      console.log('hu')
-    })
+      // serActive(!active)
+      // console.log('Login successful',active) qw23wa
+      })
   }
     const loginWithGoogle = ()=>{
        const provider = new firebase.auth.GoogleAuthProvider()
