@@ -12,8 +12,9 @@ function App() {
 
   return (
     <div>
-      {user ? <Chat /> : <Login />}
-      <Users />
+      {user ? <Chat /> :
+       <Login />}
+      {/* <Users /> */}
       {/* <Register /> */}
     </div>
   );

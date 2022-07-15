@@ -8,8 +8,8 @@ function Users() {
   const [data, setData] = useState([]);
   const { user } = React.useContext(ContextData);
   console.log(auth.currentUser.uid)
-  const {active,serActive}= React.useContext(ContextData)
-  console.log(active,"acyive in users")
+  // const {active,serActive}= React.useContext(ContextData)
+  // console.log(active,"acyive in users")
   useEffect(() => {
     const getUsers = async () => {
       db.collection("users").onSnapshot((snapshot) => {
