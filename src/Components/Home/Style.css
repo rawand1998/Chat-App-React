@@ -1,8 +1,14 @@
 .home-container{
- 
+ display:flex;flex-direction:column;
 }
 .home{
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
+    flex-direction:column;
     justify-content: space-around;
+}
+.chat-user{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around
 }
