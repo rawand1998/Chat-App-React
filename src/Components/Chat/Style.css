@@ -2,7 +2,9 @@
     width:50%;
     background-color: #fafafa;
     display:flex;flex-direction: column;
-    height:600px
+    height:600px;
+    border: 1px solid #ccc;
+    border-radius:20px
 }
 .msgs{
     display: flex;
@@ -17,8 +19,8 @@
 }
 .sent{
 
-    color: #395dff;
-    border: 1px solid #395dff;
+    color: #7879F1;
+    border: 1px solid #7879F1;
     display: flex;
    
     flex-direction: row-reverse;
@@ -27,19 +29,20 @@
     text-align: end;
     float: right;
    width: 100%;
-   border-radius: 25px;
+   border-radius: 10px;
    height: 70px;
    margin-top: 15px;
 }
 .received{
-    border-radius: 25px;
+    border-radius: 10px;
     height: 70px;
     width: 100%;
-    color: #000000;
+    color: #ffff;
     border: 1px solid lightgray;
     margin-top: 15px;
   background-color: #fafafa;
   /* border-top-left-radius: 1000px; */
+  background-color: #7879F1;
   float: left;
   padding-right: 15px;
   text-align: center;
