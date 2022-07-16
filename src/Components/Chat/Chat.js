@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import Logout from '../Auth/Logout'
+import NavChat from '../Chat/NavChat'
 
 import {db,auth} from '../../firebase'
 import SendMsg from './SendMsg'
@@ -21,7 +21,7 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
     <div className="chat-container">
    
         
-          
+  <NavChat/>
           <div className="msgs">
            {msg.map(({ id, text, photoURL, uid }) =>(
             <div key={id} className={`msg ${uid === auth.currentUser.uid ? 'sent' : 'received'}`}>
@@ -29,7 +29,7 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
                <div className="data">
             
                 <p>{text}</p>
-                <img src={photoURL} />
+                {/* <img src={photoURL} /> */}
               </div>
              
           
