@@ -18,7 +18,7 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
     },[])
   return (
   
-    <div>
+    <div className="chat-container">
           <Logout />
         
           
@@ -26,9 +26,10 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
            {msg.map(({ id, text, photoURL, uid }) =>(
             <div key={id} className={`msg ${uid === auth.currentUser.uid ? 'sent' : 'received'}`}>
            
-               <div>
-                <h1>{text}</h1>
-            <img src={photoURL} />
+               <div className="data">
+            
+                <p>{text}</p>
+                <img src={photoURL} />
               </div>
            
           
