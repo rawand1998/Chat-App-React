@@ -18,7 +18,8 @@
     background-color:#fff;
     border: 1px solid #ccc;
     border-radius:20px;
-    margin-top:50px
+    margin-top:50px;
+    height:600px
 }
 .users{
     display:flex;
@@ -27,13 +28,13 @@
 }
 .items{
     display: flex;
-   padding-top:15px;
+   padding-top:25px;
   
 }
 .items p{
     padding-left: 15px;
-    font-weight: 600;
-    font-size:25px;
+    font-weight: bold;
+    font-size:18px;
     margin-left:15px
 }
 .items img{
@@ -52,4 +53,7 @@
 }
 .users h1{
     margin-left: 15px;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

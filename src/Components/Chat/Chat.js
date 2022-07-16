@@ -19,7 +19,7 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
   return (
   
     <div className="chat-container">
-          <Logout />
+   
         
           
           <div className="msgs">
@@ -29,9 +29,9 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
                <div className="data">
             
                 <p>{text}</p>
-             
+                <img src={photoURL} />
               </div>
-              {/* <img src={photoURL} /> */}
+             
           
             </div>
            ))}
