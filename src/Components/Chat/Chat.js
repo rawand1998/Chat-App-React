@@ -3,7 +3,7 @@ import Logout from '../Auth/Logout'
 
 import {db,auth} from '../../firebase'
 import SendMsg from './SendMsg'
-
+import './Style.css'
 function Chat() {
     const [msg,setMsg] = useState([])
     
@@ -20,7 +20,7 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
   
     <div>
           <Logout />
-          <SendMsg />
+        
           
           <div className="msgs">
            {msg.map(({ id, text, photoURL, uid }) =>(
@@ -35,7 +35,7 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
             </div>
            ))}
           </div>
-     
+          <SendMsg />
       
     </div>
   )
