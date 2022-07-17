@@ -1,12 +1,12 @@
-import React,{useState,useEffect} from 'react'
-import NavChat from '../Chat/NavChat'
+import React,{useState,useEffect,useRef} from 'react'
+import NavChat from './NavChat'
 
 import {db,auth} from '../../firebase'
 import SendMsg from './SendMsg'
 import './Style.css'
 function Chat() {
     const [msg,setMsg] = useState([])
-    
+    const scroll = useRef()
     useEffect(()=>{
      const getMsg = async () => {
 
@@ -36,7 +36,8 @@ db.collection('massage').orderBy('createdAt').limit(50).onSnapshot((snapshot) =>
             </div>
            ))}
           </div>
-          <SendMsg />
+          <SendMsg scroll={scroll} />
+          <div ref={scroll}></div>
       
     </div>
   )
