@@ -29,38 +29,49 @@ function Register() {
     });
   };
   return (
-    <div className="login">
-      <form>
-        <label>UserName</label>
-        <input
-          type="text"
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
-        />
-        <label>Email</label>
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
+   
+    <div className="login-pg">
+    <div className="login-form-area">
+      <div className="login-form">
+      <div className="login-heading">
+        <span>Register</span>
+        <p>Enter Register details to get access</p>
+      </div>
+      <div className="login-box">
+      <div className="single-input-feilds">
+          <label for="">Username </label>
+          <input  value={userName}  placeholder="Email Address"  name="name"
+        onChange={(e)=>setUserName(e.target.value)} />
+          
+        </div>
+        <div className="single-input-feilds">
+          <label for="">Email Address</label>
+          <input  value={email}  placeholder="Email Address" name="email"
+        onChange={(e)=>setEmail(e.target.value)} />
+        
+        </div>
+        <div  className="single-input-feilds">
         <label>Password</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <label>Upload Image</label>
-        <input
-          type="file"
-      
-          onChange={handleImage}
-        />
-      </form>
-      <button type="submit" onClick={register}>
-        Register
-      </button>
+      <input
+        type="password"
+        placeholder="Email Address"
+        value={password}
+        onChange={(e)=>setPassword(e.target.value)}
+        name="password"
+      />
+       
+        </div>
+       
+      </div>
+      <div className="login-footer">
+    
+        <button className="submit-btn3-register submit-btn3" onClick={Register}>Register </button>
+      </div>
     </div>
+    </div>
+
+  
+  </div>
   );
 }
 
