@@ -1,6 +1,6 @@
 import React from 'react'
 import { auth } from '../../firebase'
-
+import './Style.css'
 function Logout() {
     const logout = ()=>{
         auth.signOut()

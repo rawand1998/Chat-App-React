@@ -16,16 +16,19 @@ function Users() {
   }, []);
 
   return (
-    <div>
-      <div>
+    <div className="user-container">
+      <div className="users">
+        <h1>Users</h1>
+        <input  type="text" placeholder="Search"/>
         {data.length > 0 ? (
           data.map((item) => (
-            <div key={item.id}>
-              <img src={item.img} />
-              {item.name}
-              <span className={user.uid === item.uid ? "online" : "offline"}>
-                active
-              </span>
+            <div key={item.id} className="items">
+              <p className={user.uid === item.uid ? "online" : "offline"}>
+                
+                </p>
+              <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" />
+              <p>{item.name}</p>
+              
             </div>
           ))
         ) : (
