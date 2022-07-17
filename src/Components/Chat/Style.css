@@ -92,12 +92,12 @@
 .navChat-name {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   
 }
 .navChat-name img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 .navChat-name p {
@@ -109,12 +109,14 @@
 .navchat-icons {
   display: flex;
   justify-content: space-around;
+
+
 }
 .navchat-icons .icon-chat {
   color: #7879f1;
   font-weight: bold;
   padding-left: 25px;
-  font-size: 45px;
+  font-size: 40px;
 }
 .info-icon {
   color: #7879f1;
@@ -123,6 +125,6 @@
   border-radius: 50%;
   margin-top: 10px;
   margin-right: 15px;
-  padding-left: 8px;
-  font-size: 25px;
+  padding-left: 15px;
+  font-size: 22px;
 }

@@ -29,7 +29,7 @@ const nagvigate = useNavigate()
         <div className="single-input-feilds">
           <label for="">Email Address</label>
           <input  value={email}  placeholder="Email Address" name="email"
-        onChange={(e)=>setPassword(e.target.value)} />
+        onChange={(e)=>setEmail(e.target.value)} />
          
         </div>
         <div  className="single-input-feilds">
@@ -48,7 +48,7 @@ const nagvigate = useNavigate()
       <div className="login-footer">
         <p> Don’t have an account? <Link to="/register">Sign Up</Link></p>
         <div className="login-btns">
-        <button className="submit-btn3" onClick={Login}>Login </button>
+        <button className="submit-btn3" onClick={login}>Login </button>
         <button className="submit-btn" onClick={loginWithGoogle}>Login With Google </button>
         </div>
        
