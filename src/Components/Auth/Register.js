@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import firebase from "firebase/compat/app";
+
 import { auth, db } from "../../firebase";
-import {Link,useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
+import './Style.css'
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
