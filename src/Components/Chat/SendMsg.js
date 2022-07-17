@@ -2,7 +2,8 @@ import React,{useState} from 'react'
 import {db,auth} from '../../firebase'
 import firebase from 'firebase/compat/app';
 import './Style.css'
-function SendMsg() {
+function SendMsg({scroll}) {
+ 
     const { uid, photoURL } = auth.currentUser
     const [msg,setMsg] = useState('')
     const submit=(e)=>{
@@ -14,6 +15,8 @@ function SendMsg() {
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
         })
         setMsg('')
+        scroll.current.scrollIntoView({ behavior: 'smooth' })
+        console.log(scroll,"==========")
     }
   return (
    
